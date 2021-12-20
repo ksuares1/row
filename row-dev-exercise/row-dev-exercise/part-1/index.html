@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Part 1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Part 1</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
 	<style>
@@ -21,18 +22,9 @@
 <body>
     <h1>Weather Report</h1>
 	<div id="content">
-		function fetchData(){
-			fetch('https://restofworld.org/wp-content/projects/code/exercise/data/weather.js')
-			.then(response=> response.json())
-			.then(data => {
-			})
-				.catch(() => {
-					msg.textConten ="Search for the weather conditions in Palo Alto";
-			});
-			
-		}
+
 		
-		fetchData();
+		
 			<!-- Current conditions for Palo Alto -->
 		</div>
 		<div id="forecast">
@@ -40,7 +32,15 @@
 		</div>
 	</div>
 	
+	<!-- <script>
+		document.documentElement.className = 
+		   document.documentElement.className.replace("no-js","js");
+	</script> -->
 
-	<script src="index.html" text="text/javascript"></script>
+	<script src="./weather.js" text="text/javascript"></script>
+
+</head>
+<body>
+    
 </body>
 </html>
