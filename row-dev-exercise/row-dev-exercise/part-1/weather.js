@@ -8,8 +8,9 @@ fetch(url , {
     body: JSON.stringify(ob)
 }
 .then(response=> response.json())
-.then(data => {
+.async(data => {
 })
     .catch(() => {
-        msg.textContent= "Search for the weather conditions in Palo Alto";
-})
+        msg.textContent= 'Search for the weather conditions in Palo Alto';
+}));
+
