@@ -1,3 +1,4 @@
+window.addEventListener('load',() =>{
 const url='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js';
 fetch(url , {
     mode:'no-cors',
@@ -5,12 +6,15 @@ fetch(url , {
     headers: {
          "Content-Type": "application/json"
     },
-    body: JSON.stringify(ob)
+    // body: JSON.stringify(ob)
 }
-.then(response=> response.json())
-.async(data => {
-})
-    .catch(() => {
-        msg.textContent= 'Search for the weather conditions in Palo Alto';
-}));
+.then((response) =>{
+    return response.json();
+  .then((data) => {
+    console.log(data);
+    const city= data.name;
+    const {temp} = data.main;
 
+  });
+}));
+}
