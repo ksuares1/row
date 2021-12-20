@@ -10,11 +10,11 @@ fetch(url , {
 }
 .then((response) =>{
     return response.json();
+})
   .then((data) => {
     console.log(data);
     const city= data.name;
     const {temp} = data.main;
 
-  });
-}));
-}
+  }));
+});
