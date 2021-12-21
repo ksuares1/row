@@ -20,3 +20,18 @@
 //     }));
 // });
 
+
+// window.onload = function(){
+//     const obj={geoloc: "city", limit:15 };
+//     let sc = document.createElement("script");
+//     sc.src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js '
+//     + JSON.stringify(obj);
+//      document.body.appendChild("#content");
+//     function myFunc(myObj){
+//         let txt="";
+//         for(let x in myObj){
+//             txt += myObj[x].name + "<br>"
+//         }
+//         document.getElementById("content").innerHTML = txt;
+//     }
+// }

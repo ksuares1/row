@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,38 +21,27 @@
 </head>
 <body>
     <h1>Weather Report</h1>
-    <!-- Current conditions for Palo Alto -->
+     <!-- Current conditions for Palo Alto  -->
 	<div id="content">
-        <script>
-        window.onload = function(){
-            const obj={table: "cities", limit:10 };
-            var script = document.createElement('script');
-            script.src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js'
-            + JSON.stringify(obj);
-            document.head.appendChild(script);
-            function myFunc(myObj){
-                let txt="";
-                for(let x in myObj){
-                    txt += myObj[x].name + "<br>"
-                }
-                document.getElementById("content").innerHTML = txt;
-            }
+        <script type="text/javascript">
+        var weatherJsonpCallback = function(data){
+            console.log(data);
         }
-        </script>
-    
-		</div>
 
-        <!-- Current weekly forecast for Palo Alto -->
+        </script>
+     <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js ?callback=weatherJsonpCallback'>
+        weatherJsoncallback(data);
+   </script> 
+   
+		</div>
+  <!-- Current weekly forecast for Palo Alto -->
+      
+
 		<div id="forecast">
 			
 		</div>
 	</div>
 	
-
-	<!-- <script src="./weather.js" text="text/javascript"></script> -->
-
-</head>
-<body>
-    
+	
 </body>
 </html>
