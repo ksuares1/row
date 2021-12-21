@@ -7,14 +7,15 @@ fetch(url , {
          "Content-Type": "application/json"
     },
     // body: JSON.stringify(ob)
-}
-.then((response) =>{
-    return response.json();
-})
-  .then((data) => {
-    console.log(data);
-    const city= data.name;
-    const {temp} = data.main;
 
-  }));
+
+    .then((response) => { response.json()
+ .then((data) => {
+    console.log(data.sentence);
+    document.querySelector("#content").innerText = data.sentence;
+    // const city= data.name;
+    // const {temp} = data.main;
+ }
+  });
+});
 });
