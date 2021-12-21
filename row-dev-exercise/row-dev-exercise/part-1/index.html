@@ -25,11 +25,11 @@
 	<div id="content">
         <script>
         window.onload = function(){
-            const obj={cities: "Palo Alto", conditions:"" };
-            let s = document.createElement("script");
-            s.src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js'
-            JSON.stringify(obj);
-            document.body.appendChild(s);
+            const obj={table: "cities", limit:10 };
+            var script = document.createElement('script');
+            script.src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js'
+            + JSON.stringify(obj);
+            document.head.appendChild(script);
             function myFunc(myObj){
                 let txt="";
                 for(let x in myObj){
