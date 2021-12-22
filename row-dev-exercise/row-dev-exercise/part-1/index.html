@@ -27,12 +27,9 @@
         //  window.onload = function(){
             var weatherJsonpCallback = function(data){
             console.log(data);
-            // Created a for loop so that it will go through the array of weatherJsonpCallback. 
-            for(let i=0; i< weatherJsonpCallback.length; i++){
-                  console.log(data.cities[9]);
-            
-        }
-    }
+            console.log(data.cities[9].citykey);
+            document.getElementById("content").append(data.cities[9].citykey);
+         }
    
         </script>
      <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
