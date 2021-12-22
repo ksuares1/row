@@ -27,15 +27,15 @@
         //  window.onload = function(){
             var weatherJsonpCallback = function(data){
             console.log(data);
-            let i=[];
-            for(let i=0;i<=cities.length; i++){
-                if()
-            }
+            // Created a for loop so that it will go through the array of weatherJsonpCallback. 
+            for(let i=0; i< weatherJsonpCallback.length; i++){
+                  console.log(data.cities[i]);
+            
         }
-    // }
-        // I want to go into the value of cities and select the array for Palo Alto. I will have to create a for loop for it go through the array, and write a endpoint so it will stop at [9].
+    }
+   
         </script>
-     <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js ?callback=weatherJsonpCallback'>
+     <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
     
    </script> 
    
