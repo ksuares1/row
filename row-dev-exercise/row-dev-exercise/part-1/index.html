@@ -23,12 +23,16 @@
     <h1>Weather Report</h1>
      <!-- Current conditions for Palo Alto  -->
 	<div id="content">
+        <p id="temp"></p>
         <script type="text/javascript">
         //  window.onload = function(){
             var weatherJsonpCallback = function(data){
-            console.log(data);
-            console.log(data.cities[9].citykey);
-            document.getElementById("content").append(data.cities[9].citykey);
+             console.log(data.cities);
+            // let i = data;
+            // for(let i=0; i<data.length; i++){
+              document.getElementById("content").append(data.cities[9].geoloc.city);
+             document.getElementById("temp").prepend(data.cities[9].alerts.current[1]);
+            // }
          }
    
         </script>
