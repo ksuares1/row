@@ -23,17 +23,24 @@
     <h1>Weather Report</h1>
      <!-- Current conditions for Palo Alto  -->
 	<div id="content">
-        <p id="temp"></p>
         <script type="text/javascript">
-        //  window.onload = function(){
+            // window.onload = function(){
+              let theCities, theCondition, theTemp=[];
             var weatherJsonpCallback = function(data){
-             console.log(data.cities);
-            // let i = data;
-            // for(let i=0; i<data.length; i++){
-              document.getElementById("content").append(data.cities[9].geoloc.city);
-             document.getElementById("temp").prepend(data.cities[9].alerts.current[1]);
-            // }
-         }
+             console.log(data);
+              // theCity = data.cites[9];
+              // theCondition=data.condtion;
+              // theTemp = data.temp;
+            
+            
+               document.getElementById("content").append(data.cities[9].geoloc.city);
+              var cities=data.cities
+              for(let i =0; i< data.cities.length-1; i++)
+              console.log(cities);
+              //  document.getElementById("content").append(data.cities[9].hourly);
+            //  document.getElementById("content").prepend(data.cities[9].citykey.current[1]);
+            //  }
+        }
    
         </script>
      <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
