@@ -36,9 +36,11 @@
                document.getElementById("content").append(data.cities[9].geoloc.city);
               var cities=data.cities
               for(let i =0; i< data.cities.length-1; i++)
-              console.log(cities[9].hourly[9].temp);
+               console.log(cities[9]);
+               console.log(cities[9].hourly[9].temp);
+              console.log(cities[9].hourly[9].condition)
               document.getElementById("content").append(cities[9].hourly[9].temp);
-            //  document.getElementById("content").prepend(data.cities[9].citykey.current[1]);
+             document.getElementById("content").prepend(cities[9].hourly[9].condition);
             //  }
         }
    
