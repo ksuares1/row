@@ -36,8 +36,8 @@
                document.getElementById("content").append(data.cities[9].geoloc.city);
               var cities=data.cities
               for(let i =0; i< data.cities.length-1; i++)
-              console.log(cities);
-              //  document.getElementById("content").append(data.cities[9].hourly);
+              console.log(cities[9].hourly[9].temp);
+              document.getElementById("content").append(cities[9].hourly[9].temp);
             //  document.getElementById("content").prepend(data.cities[9].citykey.current[1]);
             //  }
         }
