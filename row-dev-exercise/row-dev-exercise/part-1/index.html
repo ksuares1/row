@@ -32,24 +32,19 @@
                document.getElementById("content").append(data.cities[9].geoloc.city);
               
                  
-                 var cities = data.cities
+                 const cities = data.cities
               //  const fahrenheit= (temp * 9) / 5 + 32;
               //   let weekly= data.daycondition; 
                  for(let i =0; i< data.cities.length-1; i++)
-                 for(key in cities[i]){
-                   console.log('Key: '+ key + 'Value:' + cities[i][key]);
-                 }
-                  // console.log(cities[9]);
-              //  console.log(cities[9].hourly[9].temp);
-              //  console.log(cities[9].hourly[9].condition);
-              //  console.log(cities[9].weekly[0]);
-              //  console.log(cities[9].weekly[0].daycondition);
-              //  Using the forEach method to have each city listed with its condition. 
-              //  cities.forEach(element =>{
-              //    console.log(weekly.daycondition);
-              //  })
               
-              // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
+                //  Daily Forecast
+                  var daily= cities[9].weekly;
+                   console.log(daily);
+                  
+              
+              
+              
+                // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
               document.getElementById("content").append(cities[9].hourly[9].temp);
               document.getElementById("content").prepend(cities[9].hourly[9].condition);
         }
