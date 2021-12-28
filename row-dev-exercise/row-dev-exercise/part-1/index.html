@@ -25,29 +25,33 @@
 	<div id="content">
         <script type="text/javascript">
             // window.onload = function(){
-              // let theCities, theCondition, theTemp=[];
+            
             var weatherJsonpCallback = function(data){
              console.log(data);
-              // theCity = data.cites[9];
-              // theCondition=data.condtion;
-              // theTemp = data.temp;
-            
-            
+              // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
                document.getElementById("content").append(data.cities[9].geoloc.city);
-              var cities=data.cities
-              for(let i =0; i< data.cities.length-1; i++)
-               console.log(cities[9]);
-               console.log(cities[9].hourly[9].temp);
-              console.log(cities[9].hourly[9].condition);
-              console.log(cities[9].weekly[0]);
-              console.log(cities[9].weekly[0].daycondition);
-              var condition= data.weekly;
-              // WeatherCondition.forEach(element =>{
-                console.log(data.condition[1]);
-              // })
-              // write if statement to get the days of the week to print
+              
+                 
+                 var cities = data.cities
+              //  const fahrenheit= (temp * 9) / 5 + 32;
+              //   let weekly= data.daycondition; 
+                 for(let i =0; i< data.cities.length-1; i++)
+                 for(key in cities[i]){
+                   console.log('Key: '+ key + 'Value:' + cities[i][key]);
+                 }
+                  // console.log(cities[9]);
+              //  console.log(cities[9].hourly[9].temp);
+              //  console.log(cities[9].hourly[9].condition);
+              //  console.log(cities[9].weekly[0]);
+              //  console.log(cities[9].weekly[0].daycondition);
+              //  Using the forEach method to have each city listed with its condition. 
+              //  cities.forEach(element =>{
+              //    console.log(weekly.daycondition);
+              //  })
+              
+              // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
               document.getElementById("content").append(cities[9].hourly[9].temp);
-             document.getElementById("content").prepend(cities[9].hourly[9].condition);
+              document.getElementById("content").prepend(cities[9].hourly[9].condition);
         }
 
         
