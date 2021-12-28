@@ -39,7 +39,12 @@
                console.log(cities[9]);
                console.log(cities[9].hourly[9].temp);
               console.log(cities[9].hourly[9].condition);
+              console.log(cities[9].weekly[0]);
               console.log(cities[9].weekly[0].daycondition);
+              var condition= data.weekly;
+              // WeatherCondition.forEach(element =>{
+                console.log(data.condition[1]);
+              // })
               // write if statement to get the days of the week to print
               document.getElementById("content").append(cities[9].hourly[9].temp);
              document.getElementById("content").prepend(cities[9].hourly[9].condition);
