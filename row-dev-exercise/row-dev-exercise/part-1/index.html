@@ -36,10 +36,6 @@
                // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
                document.getElementById("content").append(cities[9].current[0].temp);
                document.getElementById("content").prepend(cities[9].current[0].condition);
-
-              //  Adding days of the week and Weather condition.
-              document.getElementById("forecast")
-
                  
                  
               //  const fahrenheit= (temp * 9) / 5 + 32;
@@ -57,7 +53,10 @@
                        console.log(element.daycondition);
                     }
                     //  Adding days of the week and Weather condition.
-              document.getElementById("forecast")
+                    // Have to get the days of the week to list out in descending order
+                   document.getElementById("forecast").append(element.day); 
+                  //  document.getElementById("forecast").prepend(element.daycondition);
+
                     
                   });
               
