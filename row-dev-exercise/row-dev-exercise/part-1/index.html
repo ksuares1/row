@@ -28,11 +28,16 @@
             
             var weatherJsonpCallback = function(data){
              console.log(data);
-              // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
+             const cities = data.cities;
+             
+             // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
                document.getElementById("content").append(data.cities[9].geoloc.city);
-              
+             
+               // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
+               document.getElementById("content").append(cities[9].hourly[9].temp);
+               document.getElementById("content").prepend(cities[9].hourly[9].condition);
                  
-                 const cities = data.cities
+                 
               //  const fahrenheit= (temp * 9) / 5 + 32;
               //   let weekly= data.daycondition; 
                  for(let i =0; i< data.cities.length-1; i++)
@@ -40,16 +45,19 @@
                 //  Daily Forecast
                   var daily= cities[9].weekly;
                    console.log(daily);
+                   
+                   // Used the forEach method to have each day individually print to the console.
                   daily.forEach(element => {
-                    console.log(element);
+                    console.log(element.day);
+                    // if(element > 10){
+                    //   console.log(element.condition);
+                    // }
                     
                   });
               
               
               
-                // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
-              document.getElementById("content").append(cities[9].hourly[9].temp);
-              document.getElementById("content").prepend(cities[9].hourly[9].condition);
+               
         }
 
         
