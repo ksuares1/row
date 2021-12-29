@@ -37,10 +37,7 @@
                document.getElementById("content").append(cities[9].current[0].temp);
                document.getElementById("content").prepend(cities[9].current[0].condition);
                  
-                 
-              //  const fahrenheit= (temp * 9) / 5 + 32;
-              //   let weekly= data.daycondition; 
-                 for(let i =0; i< data.cities.length-1; i++)
+                
               
                 //  Daily Forecast
                   var daily= cities[9].weekly;
@@ -53,9 +50,8 @@
                        console.log(element.daycondition);
                     }
                     //  Adding days of the week and Weather condition.
-                    // Have to get the days of the week to list out in descending order
                    document.getElementById("forecast").append(element.day); 
-                  //  document.getElementById("forecast").prepend(element.daycondition);
+                   document.getElementById("forecast").append(element.daycondition);
 
                     
                   });
