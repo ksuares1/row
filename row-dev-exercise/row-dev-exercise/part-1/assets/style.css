@@ -1,0 +1,13 @@
+html, body{
+    margin:  0;
+    padding: 0px;
+    color: black;
+    background-color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size:   18px;
+    line-height: 1.36em;
+}
+
+ #forecast{
+    font-size:16px;
+}
