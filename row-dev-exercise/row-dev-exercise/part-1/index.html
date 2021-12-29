@@ -23,47 +23,45 @@
     <h1>Weather Report</h1>
      <!-- Current conditions for Palo Alto  -->
 	<div id="content">
-        <script type="text/javascript">
-            // window.onload = function(){
-            
-            var weatherJsonpCallback = function(data){
-             console.log(data);
-             const cities = data.cities;
-             
-             // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
-               document.getElementById("content").append(data.cities[9].geoloc.city);
-             
-               // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
-               document.getElementById("content").append(cities[9].current[0].temp);
-               document.getElementById("content").prepend(cities[9].current[0].condition);
-                 
-                
-              
-                //  Weekly Forecast
-                  var daily= cities[9].weekly;
-                   console.log(daily);
-                   
-                   // Used the forEach method to have each day individually print to the console.
-                  daily.forEach(element => {
-                    console.log(element.day);
-                    if(element => 10){
-                       console.log(element.daycondition);
-                    }
-                    //  Adding days of the week and Weather condition.
-                   document.getElementById("forecast").append(element.day); 
-                   document.getElementById("forecast").append(element.daycondition);
-
-                    
-                  });
-              
-              
-              
-               
-        }
-
+    <script type="text/javascript">
+      // window.onload = function(){
+      //   alert("Would you like to find out the weather in Palo Alto?")
+      
+      var weatherJsonpCallback = function(data){
+       console.log(data);
+       const cities = data.cities;
+       
+       // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
+         document.getElementById("content").append(data.cities[9].geoloc.city);
+       
+         // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
+         document.getElementById("content").append(cities[9].current[0].temp ,'°');
+         document.getElementById("content").prepend(cities[9].current[0].condition);
+           
+          
         
-      </script>
-    </div>
+          //  Weekly Forecast
+            var daily= cities[9].weekly;
+             console.log(daily);
+             
+             // Used the forEach method to have each day individually print to the console.
+             daily.forEach(element => {
+              console.log(element.day);
+               if(element => 10){
+                 console.log(element.daycondition);
+              }
+              //  Adding days of the week and Weather condition.
+              document.getElementById("forecast").append(element.day); 
+               document.getElementById("forecast").append(element.daycondition);
+
+              
+             });
+          }
+        
+        
+         
+  // }
+</script>
   
   </br>
 
@@ -73,7 +71,7 @@
 		</div>
 	</div>
 
-  <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
+   <script type=text/javascript src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
     
   </script> 
 	
