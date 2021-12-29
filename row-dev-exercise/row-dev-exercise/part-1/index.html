@@ -6,16 +6,20 @@
     <title>Part 1</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
-  <link rel= "stylesheet" type="text/css" href="assets/style.css" />
+  <link rel= "stylesheet" type="text/css" href="./assets/style.css" />
 
 </head>
-<body>
+<body onload="myfunction" >
     <h1>Weather Report</h1>
+</br>
      <!-- Current conditions for Palo Alto  -->
 	<div id="content">
     <script type="text/javascript">
-      // window.onload = function(){
-      //   alert("Would you like to find out the weather in Palo Alto?")
+      //  window.onload = function(){
+        function myfunction(){
+          alert("Welcome to the weather for Palo Alto!")
+        }
+      
       
       var weatherJsonpCallback = function(data){
        console.log(data);
