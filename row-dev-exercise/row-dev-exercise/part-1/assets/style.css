@@ -31,3 +31,9 @@ h1{
     width: 35%;
     float:right;
 }
+
+/* Dropdown-Menu */
+#places , input{
+    display:flex;
+    align-items: center;
+}

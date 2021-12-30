@@ -18,9 +18,15 @@
   
     <!-- Creating Cities Drop-down Menu -->
   <div id="menu"> 
-  <p>
+  <navbar>
     <input type="button" onclick="populateCities()" value="Click to see cities"/>
-  </p>
+  </navbar>
+
+    <!--Selecting element  -->
+    <select id ="places" onchange="show (this)">
+      <option value=""> Select City</option>
+    
+    </select>
 
  <script type="text/javascript">
     //  window.onclick = function(){
@@ -41,7 +47,10 @@
       document.getElementById("content").append(cities[9].current[0].temp ,'°');
       document.getElementById("content").append(cities[9].current[0].condition);
         
-       
+      //  Dropdown menu json 
+       var ele =document.getElementById('')
+
+
      
        //  Weekly Forecast
          var daily= cities[9].weekly;
