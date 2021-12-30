@@ -14,14 +14,21 @@
 </br>
  
   <!-- Current conditions for Palo Alto  -->
-<div id="content">
-  <div id="menu">
+  <div id="content">
+  
+    <!-- Creating Cities Drop-down Menu -->
+  <div id="menu"> 
+  <p>
+    <input type="button" onclick="populateCities()" value="Click to see cities"/>
+  </p>
+
  <script type="text/javascript">
-   //  window.onload = function(){
+    //  window.onclick = function(){
     //  function myfunction(){
     //    alert("Welcome to the weather for Palo Alto!")
-    //  }
+      // }
    
+      
    
    var weatherJsonpCallback = function(data){
     console.log(data);
@@ -48,11 +55,12 @@
            }
            //  Adding days of the week and Weather condition.
            document.getElementById("forecast").append(element.day , ':' ); 
-            document.getElementById("forecast").append(element.daycondition , ' ' , '  ');
+            document.getElementById("forecast").append(element.daycondition , ' ' , ' ');
 
            
           });
        }
+      
      
       </script>
    <!-- Current weekly forecast for Palo Alto -->

@@ -22,12 +22,12 @@ h1{
     border: 2px solid darkolivegreen;
     border-radius: 5px;
     padding: 5px;
-    /* display:flex;  */
+     /* display:flex;   */
     text-align: center; 
     /* justify-content: center;
-    align-self: center;
-    flex-direction: column; */
-    height: 25%;
+    /* align-self: center; */
+    /* flex-direction: column;  */
+    height: 45%;
     width: 35%;
     float:right;
 }
