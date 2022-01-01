@@ -15,51 +15,73 @@
  
   <!-- Current conditions for Palo Alto  -->
   <div id="content">
-    <p id="weather_info"></p>
+   
     
   
     <!-- Creating Cities Drop-down Menu -->
   <div id="menu"> 
-  <navbar>
-    <input type="button" onclick="populateCities()" value="Click to see cities"/>
-  </navbar>
 
-    <!--Selecting element  -->
+    <!--Selecting a City  -->
     <select id ="places" onchange="show (this)">
-      <option value=""> Select a City</option>
+      <option value="">Choose a City</option>
     
     </select>
 
  <script type="text/javascript">
 
-    //  function myfunction(){
-    //    alert("Welcome to the weather for Palo Alto!")
-      // }
-   
-      
-   
    var weatherJsonpCallback = function(data){
     console.log(data);
+
     const cities = data.cities;
     
     // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
       document.getElementById("content").append(data.cities[9].geoloc.city, ' ');
     
       // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
-      document.getElementById("weather_info").append(cities[9].current[0].temp ,'°', ' ');
-      document.getElementById("weather_info").append(cities[9].current[0].condition);
-        
-      //  Dropdown menu json 
-       var ele = document.getElementById('places');
-       for(let i =0; i< cities.length; i++){
-         console.log(cities);
-         ele.innerHTML= ele.innerHTML + '<option value="' + data.cities[i] + '">' ['citykey'] + cities[i] ['geoloc'] +
-         '</option>';
-         
-       }
+      document.getElementById("content").append(cities[9].current[0].temp ,'°', ' ');
+      document.getElementById("content").append(cities[9].current[0].condition);
+    
+      
+       // Populating cities
+  //      let dropdown = document.getElementById('places')
+  //        dropdown.length = 0;
+
+  //        let defaultOption = document.createElement('option');
+  //        defaultOption.text = 'Choose City';
+
+  //          dropdown.add(defaultOption);
+  //          dropdown.selectedIndex = 0;
+
+  //         const url = 'https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'';
+
+  //         const request = new XMLHttpRequest();
+  //         request.open('GET', url, true);
+
+  //         request.onload = function() {
+  //       if (request.status === 200) {
+  //       const data = JSON.parse(request.responseText);
+  //       let option;
+  //       for (let i = 0; i < data.length; i++) {
+  //       option = document.createElement('option');
+  //       option.text = data[i].name;
+  //       option.value = data[i].abbreviation;
+  //       dropdown.add(option);
+  //     }
+  //   } else {
+  //     // Reached the server, but it returned an error
+  //   }   
+  // }
+
+  //   request.onerror = function() {
+  //   console.error('An error occurred fetching the JSON from ' + url);
+  //   };
+
+  // request.send();
+
+       
 
 
-     
+
        //  Weekly Forecast
          var daily= cities[9].weekly;
           console.log(daily);
@@ -88,7 +110,7 @@
 	</div>
 </div>
 
-    <script type="text/javascript" src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'>
+    <script type="text/javascript" src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'> 
     
   </script>  
   <!-- <script src="./weather.js"  type="text/javascript"> -->
