@@ -20,16 +20,29 @@
   
     <!-- Creating Cities Drop-down Menu -->
   <div id="menu">  
-    
-    
-     
-     <!--Selecting a City  -->
-       <select id ="places" onchange="show(this)">
-      `<option value="">Choose a City</option>
+
+    <!-- Selecting cities -->
+    <select id ="places">
+      <option value="">Choose a City</option>
+      <option value=""> Palo Alto </option>
+        <option value=" ">Antioch</option>
+      <option value="">Concord</option>
+      <option value="">Fairfield</option>
        </select>
 
-     
-
+       <script>
+        var select= document.getElementbyID('places');
+        var options=[];
+        for(var i = 0; i<option.length; i++){
+          var opt=options[i];
+          var el= document.createElement("option");
+          el.textContent= opt;
+          el.value = optl 
+          select.appendChild(el);
+        }
+      </script>
+       
+      
 
 
  <script type="text/javascript">
@@ -46,7 +59,9 @@
       document.getElementById("content").append(cities[9].current[0].temp ,'°', ' ');
       document.getElementById("content").append(cities[9].current[0].condition);
     
+
       
+     
       
 
 
