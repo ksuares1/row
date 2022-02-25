@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Part 1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+  <link rel= "stylesheet" type="text/css" href="assets/style.css" />
+
+</head>
+<body>
+    <h1>Weather Report</h1>
+</br>
+ 
+  <!-- Current conditions for Palo Alto  -->
+  <div id="content">
+   
+    
+  
+    <!-- Creating Cities Drop-down Menu -->
+  <div id="menu">  
+
+    <!-- Selecting cities -->
+    <select id ="places" onchange('this')>
+      <option value="">Choose a City</option>
+      <!-- <option value=""> Palo Alto </option>
+      <option value=" ">Antioch</option>
+      <option value="">Concord</option>
+      <option value="">Fairfield</optio
+      <option value="">Livermore</option>
+      <option value="">Mill Valley</option>
+      <option value="">Mountain View</option>
+      <option value=""> Napa</option>
+      <option value="">Richmond</option>
+      <option value="">San Carlos</option>
+      <option value="">San Francisco</option>
+      <option value=""> San Jose</option>
+      <option value="">San Rosa</option> -->
+       </select>
+
+       <!-- <script>
+        var select= document.getElementbyID('places');
+        var options=[];
+        for(var i = 0; i<option.length; i++){
+          var opt=options[i];
+          var el= document.createElement("option");
+          el.textContent= opt;
+          el.value = optl 
+          select.appendChild(el);
+        }
+      </script>
+        -->
+      
+
+
+ <script type="text/javascript">
+
+        var weatherJsonpCallback = function(data){
+        console.log(data);
+
+       let cities = data.cities;
+       console.log(cities);
+       for(let i=0; i<cities.length; i++){
+         if(i <= 15){
+           console.log(cities[i]);
+         }
+
+       }
+    
+    // appending cities 9(Palo Alto) to the content div, so it will print on the page. 
+      document.getElementById("content").append(data.cities[9].geoloc.city, ' ');
+    
+      // Adding the hourly temperature and condition for Palo Alto on Friday to the content div. 
+      document.getElementById("content").append(cities[9].current[0].temp ,'°', ' ');
+      document.getElementById("content").append(cities[9].current[0].condition);
+    
+      document.getElementById("places").append(cities);
+      
+     
+      
+
+
+       //  Weekly Forecast
+         var daily= cities[9].weekly;
+          console.log(daily);
+          
+          // Used the forEach method to have each day individually print to the console.
+          daily.forEach(element => {
+           console.log(element.day);
+            if(element => 10){
+              console.log(element.daycondition );
+           }
+           //  Adding days of the week and Weather condition.
+           document.getElementById("forecast").append(element.day , ':' ); 
+            document.getElementById("forecast").append(element.daycondition , ' ' , ' ');
+
+  
+           
+          });
+        }
+      
+     
+      </script>
+   <!-- Current weekly forecast for Palo Alto -->
+      	<div id="forecast">
+
+		</div>
+	</div>
+</div>
+
+    <script type="text/javascript" src='https://restofworld.org/wp-content/projects/code/exercise/data/weather.js? callback = weatherJsonpCallback'> 
+    
+  </script>  
+  <!-- <script src="./weather.js"  type="text/javascript"> -->
+
+  </script>
+	
+</body>
+</html>
